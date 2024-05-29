@@ -14,7 +14,7 @@ async function event(req, res) {
             return res.status(500).json({ error: 'Internal Server Error' });
         }
     
-       pool.query('Select start_date,leave_reason where id=?',[id],(errror,leaves)=>{
+       pool.query('Select start_date,leave_reason From leaves where id=?',[id],(errror,leaves)=>{
         if (err) {
             console.error('Error executing SQL query:', err);
             return res.status(500).json({ error: 'Internal Server Error' });
