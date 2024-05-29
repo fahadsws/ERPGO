@@ -8,7 +8,7 @@ async function event(req, res) {
         console.error('Error executing SQL query:', err);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
-    pool.query(`Select dob,name from employe`,(error,dob)=>{
+    pool.query(`Select dob,name from employees`,(error,dob)=>{
         if (err) {
             console.error('Error executing SQL query:', err);
             return res.status(500).json({ error: 'Internal Server Error' });
