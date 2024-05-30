@@ -47,7 +47,7 @@ async function leavesumbit(req, res) {
                 leave_reason,
                 remark[0].length === 0 ? null:`${remark}`,
                 created_by,
-                'Done'
+                'pending'
             ],
             (err, result) => {
                 if (err) {
